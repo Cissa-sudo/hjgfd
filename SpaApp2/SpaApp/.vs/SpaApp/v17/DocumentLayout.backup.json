@@ -1,0 +1,515 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|c:\\users\\olgak\\downloads\\telegram desktop\\spaapp2\\spaapp\\spaapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\comparisonwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\comparisonwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\comparisonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\comparisonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\database\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\database\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\comparisonwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\comparisonwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\viewmodels\\comparisonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\viewmodels\\comparisonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\models\\subscriptiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\models\\subscriptiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\database\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\database\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\database\\mysqldatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\database\\mysqldatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\database\\mysqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\database\\mysqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\spaapp\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE8480-D7C5-4698-8312-06A24F7B177F}|SpaApp\\SpaApp.csproj|solutionrelative:spaapp\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ujn\\SpaApp\\SpaApp\\BooleanToVisibilityConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ujn\\SpaApp\\SpaApp\\NotNullToVisibilityConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ujn\\SpaApp\\SpaApp\\GreaterThanZeroToVisibilityConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ujn\\SpaApp\\SpaApp\\SimpleTypeToColorConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ujn\\SpaApp\\SpaApp\\AccountWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\App.config",
+              "RelativeDocumentMoniker": "SpaApp\\App.config",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\App.config",
+              "RelativeToolTip": "SpaApp\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-20T08:25:54.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\RegisterWindow.xaml",
+              "RelativeDocumentMoniker": "SpaApp\\RegisterWindow.xaml",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\RegisterWindow.xaml",
+              "RelativeToolTip": "SpaApp\\RegisterWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T08:09:45.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "SpaApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\MainWindow.xaml",
+              "RelativeToolTip": "SpaApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T07:59:43.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\RegisterWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SpaApp\\RegisterWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\RegisterWindow.xaml.cs",
+              "RelativeToolTip": "SpaApp\\RegisterWindow.xaml.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAiwNYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:52:16.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SpaApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "SpaApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAiwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:59:39.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "SpaApp\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\LoginWindow.xaml",
+              "RelativeToolTip": "SpaApp\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T08:08:44.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\UserRepository.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Database\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\UserRepository.cs",
+              "RelativeToolTip": "SpaApp\\Database\\UserRepository.cs",
+              "ViewState": "AgIAAJ4BAAAAAAAAAAAgwL0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:01:48.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Models\\User.cs",
+              "RelativeToolTip": "SpaApp\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:00:54.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "SpaApp\\ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "SpaApp\\ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:03:14.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\packages.config",
+              "RelativeDocumentMoniker": "SpaApp\\packages.config",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\packages.config",
+              "RelativeToolTip": "SpaApp\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-24T19:09:18.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SpaApp\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "SpaApp\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:51:39.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "SpaApp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\App.xaml.cs",
+              "RelativeToolTip": "SpaApp\\App.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:54:56.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "SpaApp\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "SpaApp\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAG4BAAAAAAAAAAAwwI8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:04:46.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AccountWindow.xaml",
+              "DocumentMoniker": "D:\\ujn\\SpaApp\\SpaApp\\AccountWindow.xaml",
+              "ToolTip": "D:\\ujn\\SpaApp\\SpaApp\\AccountWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T19:33:11.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\App.xaml",
+              "RelativeDocumentMoniker": "SpaApp\\App.xaml",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\App.xaml",
+              "RelativeToolTip": "SpaApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T08:20:54.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ComparisonWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ComparisonWindow.xaml",
+              "RelativeDocumentMoniker": "SpaApp\\ComparisonWindow.xaml",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ComparisonWindow.xaml",
+              "RelativeToolTip": "SpaApp\\ComparisonWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T17:17:16.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ComparisonViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\ComparisonViewModel.cs",
+              "RelativeDocumentMoniker": "SpaApp\\ViewModels\\ComparisonViewModel.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\ComparisonViewModel.cs",
+              "RelativeToolTip": "SpaApp\\ViewModels\\ComparisonViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:14:04.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "SpaApp\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "SpaApp\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:02:43.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "SpaApp\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "D:\\ujn\\SpaApp\\SpaApp\\ViewModels\\RegisterViewModel.cs*",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAqwEwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:04:16.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ComparisonWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ComparisonWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SpaApp\\ComparisonWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ComparisonWindow.xaml.cs",
+              "RelativeToolTip": "SpaApp\\ComparisonWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:33:25.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ComparisonWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ComparisonWindow.xaml",
+              "RelativeDocumentMoniker": "SpaApp\\ComparisonWindow.xaml",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ComparisonWindow.xaml",
+              "RelativeToolTip": "SpaApp\\ComparisonWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T14:36:57.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SubscriptionType.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Models\\SubscriptionType.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Models\\SubscriptionType.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Models\\SubscriptionType.cs",
+              "RelativeToolTip": "SpaApp\\Models\\SubscriptionType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:23:15.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MySqlDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\MySqlDatabase.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Database\\MySqlDatabase.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\MySqlDatabase.cs",
+              "RelativeToolTip": "SpaApp\\Database\\MySqlDatabase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:24:17.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MySqlUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\MySqlUserRepository.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Database\\MySqlUserRepository.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\MySqlUserRepository.cs",
+              "RelativeToolTip": "SpaApp\\Database\\MySqlUserRepository.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwF0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:29:32.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Database\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\DatabaseHelper.cs",
+              "RelativeToolTip": "SpaApp\\Database\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T09:48:14.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "SpaApp\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "D:\\ujn\\SpaApp\\SpaApp\\ViewModels\\LoginViewModel.cs*",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwC0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:03:44.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Models\\Subscription.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Models\\Subscription.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Models\\Subscription.cs",
+              "RelativeToolTip": "SpaApp\\Models\\Subscription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:22:35.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SubscriptionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\SubscriptionRepository.cs",
+              "RelativeDocumentMoniker": "SpaApp\\Database\\SubscriptionRepository.cs",
+              "ToolTip": "C:\\Users\\olgak\\Downloads\\Telegram Desktop\\SpaApp2\\SpaApp\\SpaApp\\Database\\SubscriptionRepository.cs",
+              "RelativeToolTip": "SpaApp\\Database\\SubscriptionRepository.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:23:43.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BooleanToVisibilityConverter.cs",
+              "DocumentMoniker": "D:\\ujn\\SpaApp\\SpaApp\\BooleanToVisibilityConverter.cs",
+              "ToolTip": "D:\\ujn\\SpaApp\\SpaApp\\BooleanToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:19:23.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NotNullToVisibilityConverter.cs",
+              "DocumentMoniker": "D:\\ujn\\SpaApp\\SpaApp\\NotNullToVisibilityConverter.cs",
+              "ToolTip": "D:\\ujn\\SpaApp\\SpaApp\\NotNullToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:20:35.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "GreaterThanZeroToVisibilityConverter.cs",
+              "DocumentMoniker": "D:\\ujn\\SpaApp\\SpaApp\\GreaterThanZeroToVisibilityConverter.cs",
+              "ToolTip": "D:\\ujn\\SpaApp\\SpaApp\\GreaterThanZeroToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:20:05.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SimpleTypeToColorConverter.cs",
+              "DocumentMoniker": "D:\\ujn\\SpaApp\\SpaApp\\SimpleTypeToColorConverter.cs",
+              "ToolTip": "D:\\ujn\\SpaApp\\SpaApp\\SimpleTypeToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:06:13.102Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
