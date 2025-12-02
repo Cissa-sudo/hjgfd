@@ -60,10 +60,11 @@ namespace SpaApp.ViewModels
                 var user = _userRepository.GetUserByUsername(Username);
                 if (user != null)
                 {
-               
+                    // Сохраняем информацию о пользователе
                     CurrentUser = user;
                     MessageBox.Show($"Добро пожаловать, {user.FullName}!", "Успешный вход",
                                   MessageBoxButton.OK, MessageBoxImage.Information);
+                    // Закрываем окно или переходим к главному окну
                 }
             }
             else
@@ -75,6 +76,7 @@ namespace SpaApp.ViewModels
 
         private void ExecuteRegister(object parameter)
         {
+            // Логика перехода к окну регистрации
             var registerWindow = new RegisterWindow();
             registerWindow.ShowDialog();
         }
@@ -84,9 +86,10 @@ namespace SpaApp.ViewModels
             CurrentUser = new User { Username = "Гость", FullName = "Гостевой пользователь", Role = "Guest" };
             MessageBox.Show("Добро пожаловать, Гость!", "Гостевой вход",
                           MessageBoxButton.OK, MessageBoxImage.Information);
-         
+            // Закрываем окно или переходим к главному окну
         }
-        
+
+        // Свойство для хранения текущего пользователя (можно сделать статическим или передавать через Messaging)
         public User CurrentUser { get; private set; }
 
         public event PropertyChangedEventHandler PropertyChanged;

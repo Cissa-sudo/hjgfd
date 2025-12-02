@@ -74,7 +74,6 @@ namespace SpaApp.ViewModels
             get => _minPrice;
             set
             {
-               
                 _minPrice = value < 0 ? 0 : value;
                 OnPropertyChanged();
             }
@@ -85,7 +84,6 @@ namespace SpaApp.ViewModels
             get => _maxPrice;
             set
             {
-           
                 _maxPrice = value < 0 ? 0 : value;
                 OnPropertyChanged();
             }
@@ -153,8 +151,8 @@ namespace SpaApp.ViewModels
             _subscriptionRepository = new SubscriptionRepository();
             _userRepository = new UserRepository();
 
-            LoadSubscriptions();
             LoadSubscriptionTypes();
+            LoadSubscriptions();
 
             LoginCommand = new RelayCommand(_ => ShowLogin());
             LogoutCommand = new RelayCommand(_ => Logout());
@@ -171,6 +169,13 @@ namespace SpaApp.ViewModels
             try
             {
                 _allSubscriptions = _subscriptionRepository.GetAllSubscriptions();
+
+                // Инициализируем флаги сравнения для всех подписок
+                foreach (var subscription in _allSubscriptions)
+                {
+                    subscription.IsInComparison = false; // По умолчанию все не в сравнении
+                }
+
                 ApplyFilters();
             }
             catch (Exception ex)
@@ -256,6 +261,8 @@ namespace SpaApp.ViewModels
                 Subscriptions.Clear();
                 foreach (var subscription in filtered)
                 {
+                    // Обновляем флаг сравнения для отображаемых подписок
+                    subscription.IsInComparison = _comparisonList.Contains(subscription);
                     Subscriptions.Add(subscription);
                 }
 
@@ -286,6 +293,7 @@ namespace SpaApp.ViewModels
                 if (_comparisonList.Contains(subscription))
                 {
                     _comparisonList.Remove(subscription);
+                    subscription.IsInComparison = false;
                     MessageBox.Show($"{subscription.Name} удален из сравнения",
                         "Сравнение", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
@@ -298,11 +306,27 @@ namespace SpaApp.ViewModels
                         return;
                     }
                     _comparisonList.Add(subscription);
+                    subscription.IsInComparison = true;
                     MessageBox.Show($"{subscription.Name} добавлен к сравнению",
                         "Сравнение", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
 
                 UpdateComparisonProperties();
+
+                // Принудительно обновляем отображение для этой подписки
+                RefreshSubscriptionDisplay(subscription);
+            }
+        }
+
+        private void RefreshSubscriptionDisplay(Subscription subscription)
+        {
+            // Находим индекс подписки в коллекции
+            var index = Subscriptions.IndexOf(subscription);
+            if (index >= 0)
+            {
+                // Временно удаляем и добавляем обратно для обновления привязки
+                Subscriptions.RemoveAt(index);
+                Subscriptions.Insert(index, subscription);
             }
         }
 
@@ -311,9 +335,11 @@ namespace SpaApp.ViewModels
             if (parameter is Subscription subscription)
             {
                 _comparisonList.Remove(subscription);
+                subscription.IsInComparison = false;
                 MessageBox.Show($"{subscription.Name} удален из сравнения",
                     "Сравнение", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateComparisonProperties();
+                RefreshSubscriptionDisplay(subscription);
             }
         }
 
@@ -326,6 +352,14 @@ namespace SpaApp.ViewModels
 
                 if (result == MessageBoxResult.Yes)
                 {
+                    var subscriptionsToUpdate = new List<Subscription>(_comparisonList);
+
+                    foreach (var subscription in subscriptionsToUpdate)
+                    {
+                        subscription.IsInComparison = false;
+                        RefreshSubscriptionDisplay(subscription);
+                    }
+
                     _comparisonList.Clear();
                     MessageBox.Show("Список сравнения очищен",
                         "Сравнение", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -338,13 +372,15 @@ namespace SpaApp.ViewModels
                     "Сравнение", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-        
+
         public void RemoveFromComparisonDirectly(Subscription subscription)
         {
             if (_comparisonList.Contains(subscription))
             {
                 _comparisonList.Remove(subscription);
+                subscription.IsInComparison = false;
                 UpdateComparisonProperties();
+                RefreshSubscriptionDisplay(subscription);
 
                 if (_comparisonList.Count >= 2)
                 {
@@ -358,6 +394,14 @@ namespace SpaApp.ViewModels
         {
             if (_comparisonList.Count > 0)
             {
+                var subscriptionsToUpdate = new List<Subscription>(_comparisonList);
+
+                foreach (var subscription in subscriptionsToUpdate)
+                {
+                    subscription.IsInComparison = false;
+                    RefreshSubscriptionDisplay(subscription);
+                }
+
                 _comparisonList.Clear();
                 UpdateComparisonProperties();
                 MessageBox.Show("Список сравнения очищен",
@@ -438,8 +482,18 @@ namespace SpaApp.ViewModels
             }
 
             CurrentUser = null;
+
+            var subscriptionsToUpdate = new List<Subscription>(_comparisonList);
+            foreach (var subscription in subscriptionsToUpdate)
+            {
+                subscription.IsInComparison = false;
+            }
+
             _comparisonList.Clear();
             UpdateComparisonProperties();
+
+            // Обновляем отображение всех подписок
+            ApplyFilters();
         }
     }
 }

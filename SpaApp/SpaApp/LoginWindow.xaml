@@ -5,7 +5,8 @@
         Height="550" Width="400"
         MinHeight="730" MinWidth="380"
         WindowStartupLocation="CenterOwner"
-        ResizeMode="CanResize">
+        ResizeMode="CanResize"
+        Icon="spa_icon.png">
 
     <Window.Resources>
         <Style x:Key="PrimaryButtonStyle" TargetType="Button">
@@ -56,34 +57,69 @@
                 <TextBlock Text="Вход в систему" 
                           FontSize="26" FontWeight="Bold" 
                           HorizontalAlignment="Center" Margin="0,0,0,30"
-                          Foreground="#FF2D5AA1"/>
+                          Foreground="#FF2D5AA1"
+                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="300"/>
 
-                <TextBlock Text="Имя пользователя:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"/>
-                <TextBox x:Name="txtUsername" Padding="12" Margin="0,0,0,15" FontSize="14" 
-                         BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"/>
+                <TextBlock Text="Имя пользователя:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"
+                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="250"/>
+                <TextBox x:Name="txtUsername" Padding="10" Margin="0,0,0,15" FontSize="14" 
+                         BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"
+                         MaxLength="50" ToolTip="Введите имя пользователя (максимум 50 символов)"/>
 
-                <TextBlock Text="Пароль:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"/>
-                <PasswordBox x:Name="txtPassword" Padding="12" Margin="0,0,0,25" FontSize="14"
-                             BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"/>
+                <TextBlock Text="Пароль:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"
+                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="250"/>
+                <PasswordBox x:Name="txtPassword" Padding="10" Margin="0,0,0,25" FontSize="14"
+                             BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"
+                             MaxLength="50" ToolTip="Введите пароль (максимум 50 символов)"/>
 
                 <Button Content="Войти" Click="LoginButton_Click" 
-                        Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,0,12" Height="45"/>
+                        Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,0,12" Height="45">
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" 
+                                      TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="100"/>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
 
                 <TextBlock Text="Нет аккаунта?" HorizontalAlignment="Center" Margin="0,8,0,12"
-                          Foreground="#666666" FontSize="14"/>
+                          Foreground="#666666" FontSize="14"
+                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
 
                 <Button Content="Зарегистрироваться" Click="RegisterButton_Click" 
-                        Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,0,15" Height="45"/>
+                        Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,0,15" Height="45">
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" 
+                                      TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="180"/>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
 
                 <TextBlock Text="или" HorizontalAlignment="Center" Margin="0,0,0,12"
-                          Foreground="#666666" FontStyle="Italic" FontSize="14"/>
+                          Foreground="#666666" FontStyle="Italic" FontSize="14"
+                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="50"/>
 
                 <Button Content="Войти как гость" Click="GuestLoginButton_Click" 
-                        Style="{StaticResource GuestButtonStyle}" Margin="0,0,0,20" Height="45"/>
+                        Style="{StaticResource GuestButtonStyle}" Margin="0,0,0,20" Height="45">
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" 
+                                      TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="150"/>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
 
                 <Button Content="Назад" Click="BackButton_Click" 
                         Style="{StaticResource BackButtonStyle}" 
-                        HorizontalAlignment="Center" Width="100" Height="35"/>
+                        HorizontalAlignment="Center" Width="100" Height="35">
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" 
+                                      TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="80"/>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
             </StackPanel>
         </Border>
     </Grid>

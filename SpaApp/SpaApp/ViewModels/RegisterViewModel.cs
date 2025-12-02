@@ -16,6 +16,7 @@ namespace SpaApp.ViewModels
         private string _password;
         private string _confirmPassword;
         private readonly UserRepository _userRepository;
+        private bool _isRegistrationSuccessful;
 
         public string FullName
         {
@@ -24,6 +25,7 @@ namespace SpaApp.ViewModels
             {
                 _fullName = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsFormValid));
             }
         }
 
@@ -34,6 +36,7 @@ namespace SpaApp.ViewModels
             {
                 _email = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsFormValid));
             }
         }
 
@@ -44,6 +47,7 @@ namespace SpaApp.ViewModels
             {
                 _username = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsFormValid));
             }
         }
 
@@ -54,6 +58,7 @@ namespace SpaApp.ViewModels
             {
                 _password = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsFormValid));
             }
         }
 
@@ -63,6 +68,26 @@ namespace SpaApp.ViewModels
             set
             {
                 _confirmPassword = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(IsFormValid));
+                OnPropertyChanged(nameof(PasswordsMatch));
+            }
+        }
+
+        public bool PasswordsMatch => Password == ConfirmPassword;
+        public bool IsFormValid => !string.IsNullOrWhiteSpace(FullName) &&
+                                 !string.IsNullOrWhiteSpace(Email) &&
+                                 !string.IsNullOrWhiteSpace(Username) &&
+                                 !string.IsNullOrWhiteSpace(Password) &&
+                                 !string.IsNullOrWhiteSpace(ConfirmPassword) &&
+                                 PasswordsMatch;
+
+        public bool IsRegistrationSuccessful
+        {
+            get => _isRegistrationSuccessful;
+            private set
+            {
+                _isRegistrationSuccessful = value;
                 OnPropertyChanged();
             }
         }
@@ -75,14 +100,17 @@ namespace SpaApp.ViewModels
             _userRepository = new UserRepository();
             RegisterCommand = new RelayCommand(ExecuteRegister, CanExecuteRegister);
             BackCommand = new RelayCommand(ExecuteBack);
+            IsRegistrationSuccessful = false;
         }
 
         private void ExecuteRegister(object parameter)
         {
-            if (Password != ConfirmPassword)
+            // Дополнительная проверка перед регистрацией
+            if (!PasswordsMatch)
             {
                 MessageBox.Show("Пароли не совпадают", "Ошибка",
                               MessageBoxButton.OK, MessageBoxImage.Warning);
+                IsRegistrationSuccessful = false;
                 return;
             }
 
@@ -90,6 +118,16 @@ namespace SpaApp.ViewModels
             {
                 MessageBox.Show("Пользователь с таким именем уже существует", "Ошибка",
                               MessageBoxButton.OK, MessageBoxImage.Warning);
+                IsRegistrationSuccessful = false;
+                return;
+            }
+
+            // Проверка валидности email
+            if (!IsValidEmail(Email))
+            {
+                MessageBox.Show("Пожалуйста, введите корректный email адрес", "Ошибка",
+                              MessageBoxButton.OK, MessageBoxImage.Warning);
+                IsRegistrationSuccessful = false;
                 return;
             }
 
@@ -98,7 +136,7 @@ namespace SpaApp.ViewModels
                 FullName = FullName,
                 Email = Email,
                 Username = Username,
-                Password = Password, 
+                Password = Password, // В реальном приложении нужно хешировать!
                 Role = "User"
             };
 
@@ -106,27 +144,26 @@ namespace SpaApp.ViewModels
             {
                 MessageBox.Show("Регистрация успешно завершена!", "Успех",
                               MessageBoxButton.OK, MessageBoxImage.Information);
+                IsRegistrationSuccessful = true;
                 ExecuteBack(null);
             }
             else
             {
                 MessageBox.Show("Ошибка при регистрации пользователя", "Ошибка",
                               MessageBoxButton.OK, MessageBoxImage.Error);
+                IsRegistrationSuccessful = false;
             }
         }
 
         private bool CanExecuteRegister(object parameter)
         {
-            return !string.IsNullOrWhiteSpace(FullName) &&
-                   !string.IsNullOrWhiteSpace(Email) &&
-                   !string.IsNullOrWhiteSpace(Username) &&
-                   !string.IsNullOrWhiteSpace(Password) &&
-                   !string.IsNullOrWhiteSpace(ConfirmPassword);
+            return IsFormValid;
         }
 
         private void ExecuteBack(object parameter)
         {
-                  foreach (Window window in Application.Current.Windows)
+            // Логика возврата к окну входа
+            foreach (Window window in Application.Current.Windows)
             {
                 if (window is LoginWindow)
                 {
@@ -135,13 +172,30 @@ namespace SpaApp.ViewModels
                 }
             }
 
+            // Закрываем текущее окно регистрации
             foreach (Window window in Application.Current.Windows)
             {
-                if (window is RegisterWindow)
+                if (window is RegisterWindow registerWindow)
                 {
-                    window.Close();
+                    registerWindow.Close();
                     break;
                 }
+            }
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
             }
         }
 

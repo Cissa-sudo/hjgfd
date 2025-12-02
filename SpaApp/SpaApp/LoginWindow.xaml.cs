@@ -27,6 +27,7 @@ namespace SpaApp
                 return;
             }
 
+            // Проверяем подключение к БД
             if (!Database.DatabaseHelper.TestConnection())
             {
                 MessageBox.Show("Не удалось подключиться к базе данных. Проверьте настройки подключения.", "Ошибка БД",
@@ -34,6 +35,7 @@ namespace SpaApp
                 return;
             }
 
+            // Проверяем пользователя в БД
             if (_userRepository.ValidateUser(txtUsername.Text, txtPassword.Password))
             {
                 var user = _userRepository.GetUserByUsername(txtUsername.Text);
@@ -51,7 +53,7 @@ namespace SpaApp
 
                 IsSuccess = true;
                 this.DialogResult = true;
-                this.Close(); 
+                this.Close(); // Закрываем окно входа после успешного входа
             }
             else
             {
@@ -62,21 +64,26 @@ namespace SpaApp
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
+            // Открываем окно регистрации поверх окна входа
             var registerWindow = new RegisterWindow();
-            registerWindow.Owner = this; 
+            registerWindow.Owner = this; // Устанавливаем владельца
             registerWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             var registerResult = registerWindow.ShowDialog();
 
             if (registerResult == true && registerWindow.IsSuccess)
             {
+                // Если регистрация успешна, автоматически входим и закрываем окно входа
                 Username = registerWindow.Username;
                 FullName = registerWindow.FullName;
                 Email = registerWindow.Email;
                 IsSuccess = true;
 
                 this.DialogResult = true;
-                this.Close(); 
+                this.Close(); // Закрываем окно входа
+            }
+            // Если регистрация отменена, остаемся в окне входа (ничего не делаем)
+        }
 
         private void GuestLoginButton_Click(object sender, RoutedEventArgs e)
         {
@@ -85,13 +92,13 @@ namespace SpaApp
             Email = "guest@example.com";
             IsSuccess = true;
             this.DialogResult = true;
-            this.Close();
+            this.Close(); // Закрываем окно входа
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
-            this.Close(); 
+            this.Close(); // Закрываем окно входа
         }
     }
 }

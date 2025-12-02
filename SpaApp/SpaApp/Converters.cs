@@ -6,6 +6,7 @@ using System.Windows.Media;
 
 namespace SpaApp
 {
+    // Конвертер для текста кнопки сравнения
     public class BoolToComparisonTextConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -23,7 +24,8 @@ namespace SpaApp
         }
     }
 
-     public class BoolToComparisonColorConverter : IValueConverter
+    // Конвертер для цвета кнопки сравнения
+    public class BoolToComparisonColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

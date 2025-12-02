@@ -5,7 +5,8 @@
         Height="600" Width="450"
         MinHeight="750" MinWidth="420"
         WindowStartupLocation="CenterOwner"
-        ResizeMode="CanResize">
+        ResizeMode="CanResize"
+        Icon="spa_icon.png">
 
     <Window.Resources>
         <Style x:Key="PrimaryButtonStyle" TargetType="Button">
@@ -36,34 +37,59 @@
                     <TextBlock Text="Регистрация" 
                               FontSize="26" FontWeight="Bold" 
                               HorizontalAlignment="Center" Margin="0,0,0,35"
-                              Foreground="#FF2D5AA1"/>
+                              Foreground="#FF2D5AA1"
+                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="300"/>
 
-                    <TextBlock Text="Полное имя:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"/>
-                    <TextBox x:Name="txtFullName" Padding="12" Margin="0,0,0,20" FontSize="14" 
+                    <TextBlock Text="Полное имя:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"
+                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
+                    <TextBox x:Name="txtFullName" Padding="10" Margin="0,0,0,20" FontSize="14" 
                              BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"
-                             TextChanged="txtFullName_TextChanged"/>
+                             MaxLength="50" ToolTip="Введите ваше полное имя (максимум 50 символов)"/>
 
-                    <TextBlock Text="Email:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"/>
-                    <TextBox x:Name="txtEmail" Padding="12" Margin="0,0,0,20" FontSize="14"
-                             BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"
-                             TextChanged="txtEmail_TextChanged"/>
+                    <TextBlock Text="Email:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"
+                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
+                    <TextBox x:Name="txtEmail" Padding="10" Margin="0,0,0,20" FontSize="14"
+                             BorderBrush="#DDDDDD" BorderThickness="1" Height="40"
+                             MaxLength="100" ToolTip="Введите email (максимум 100 символов)"/>
 
-                    <TextBlock Text="Имя пользователя:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"/>
-                    <TextBox x:Name="txtUsername" Padding="12" Margin="0,0,0,20" FontSize="14"
-                             BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"
-                             TextChanged="txtUsername_TextChanged"/>
+                    <TextBlock Text="Имя пользователя:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"
+                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
+                    <TextBox x:Name="txtUsername" Padding="10" Margin="0,0,0,20" FontSize="14"
+                             BorderBrush="#DDDDDD" BorderThickness="1" Height="40"
+                             MaxLength="20" ToolTip="Введите имя пользователя (максимум 20 символов)"/>
 
-                    <TextBlock Text="Пароль:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"/>
-                    <PasswordBox x:Name="txtPassword" Padding="12" Margin="0,0,0,30" FontSize="14"
-                                 BorderBrush="#FFDDDDDD" BorderThickness="1" Height="40"
-                                 PasswordChanged="txtPassword_PasswordChanged"/>
+                    <TextBlock Text="Пароль:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"
+                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
+                    <PasswordBox x:Name="txtPassword" Padding="10" Margin="0,0,0,20" FontSize="14"
+                                 BorderBrush="#DDDDDD" BorderThickness="1" Height="40"
+                                 MaxLength="20" ToolTip="Введите пароль (максимум 20 символов)"/>
 
-                    <Button Content="Зарегистрироваться" Click="RegisterButton_Click" 
-                            Style="{StaticResource PrimaryButtonStyle}" Margin="0,15,0,20" Height="45"/>
+                    <TextBlock Text="Подтвердите пароль:" Margin="0,0,0,8" FontWeight="SemiBold" FontSize="14"
+                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
+                    <PasswordBox x:Name="txtConfirmPassword" Padding="10" Margin="0,0,0,30" FontSize="14"
+                                 BorderBrush="#DDDDDD" BorderThickness="1" Height="40"
+                                 MaxLength="20" ToolTip="Подтвердите пароль (максимум 20 символов)"/>
 
-                    <Button Content="Назад" Click="BackButton_Click" 
+                    <Button x:Name="btnRegister" Content="Зарегистрироваться" 
+                            Style="{StaticResource PrimaryButtonStyle}" Margin="0,15,0,20" Height="45">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" 
+                                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+
+                    <Button x:Name="btnBack" Content="Назад" 
                             Style="{StaticResource BackButtonStyle}" 
-                            HorizontalAlignment="Center" Width="100" Height="35"/>
+                            HorizontalAlignment="Center" Width="100" Height="35">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" 
+                                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="80"/>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
                 </StackPanel>
             </ScrollViewer>
         </Border>

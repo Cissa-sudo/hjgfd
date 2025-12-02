@@ -6,7 +6,8 @@
         Height="800" Width="1100"
         MinHeight="600" MinWidth="900"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResize">
+        ResizeMode="CanResize"
+        Icon="spa_icon.png">
 
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
@@ -39,6 +40,28 @@
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
+
+        <Style x:Key="ComparisonHeaderButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#FF2D5AA1"/>
+            <Setter Property="BorderBrush" Value="#FF2D5AA1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="#FFE0E0E0"/>
+                    <Setter Property="Foreground" Value="#FF999999"/>
+                    <Setter Property="BorderBrush" Value="#FFCCCCCC"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFF0F8FF"/>
+                    <Setter Property="BorderBrush" Value="#FF1E4A8F"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <Grid Background="#FFF5F5F5">
@@ -47,6 +70,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <!-- Шапка -->
         <Border Grid.Row="0" Background="#FF2D5AA1" Padding="15">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -56,37 +80,46 @@
 
                 <StackPanel Grid.Column="0" Orientation="Vertical">
                     <TextBlock Text="Абонементы для спа и бассейнов" 
-                      Foreground="White" FontSize="24" FontWeight="Bold"/>
+                      Foreground="White" FontSize="24" FontWeight="Bold"
+                      TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="600"/>
                     <TextBlock Text="Найдите идеальный абонемент для отдыха и спорта" 
-                      Foreground="#CCFFFFFF" FontSize="14" Margin="0,5,0,0"/>
+                      Foreground="#CCFFFFFF" FontSize="14" Margin="0,5,0,0"
+                      TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="600"/>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                     <!-- Информация о пользователе -->
                     <TextBlock Text="{Binding CurrentUser.FullName, StringFormat='Добро пожаловать, {0}!'}" 
                       Foreground="White" Margin="0,0,15,0" VerticalAlignment="Center"
-                      Visibility="{Binding IsLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                      Visibility="{Binding IsLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"
+                      TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="250"/>
 
-
+                    <!-- Кнопка сравнения - белый фон, синий текст -->
                     <Button Command="{Binding CompareCommand}"
-                    Background="White" 
-                    Padding="15,8"
-                    Margin="0,0,15,0"
-                    IsEnabled="{Binding CanCompare}"
-                    FontWeight="SemiBold" Cursor="Hand"
-                    ToolTip="Сравнить выбранные абонементы"
-                    BorderThickness="1" BorderBrush="#FF2D5AA1">
+                            Style="{StaticResource ComparisonHeaderButtonStyle}"
+                            Margin="0,0,15,0"
+                            IsEnabled="{Binding CanCompare}"
+                            ToolTip="Открыть окно сравнения выбранных абонементов">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Сравнить" Foreground="#FF2D5AA1" FontSize="14"/>
+                            <TextBlock Text="Сравнение" VerticalAlignment="Center"/>
                             <TextBlock Text="{Binding SelectedComparisonCount, StringFormat=' ({0})'}" 
-                              Foreground="#FF2D5AA1" FontSize="14" FontWeight="Bold" Margin="2,0,0,0"/>
+                              FontWeight="Bold" 
+                              VerticalAlignment="Center"
+                              Margin="2,0,0,0"/>
                         </StackPanel>
                     </Button>
 
+                    <!-- Кнопка входа (показывается только когда НЕ авторизован) -->
                     <Button Content="Войти" Command="{Binding LoginCommand}" 
-                    Background="#FF2D5AA1" Foreground="White" Padding="15,8"
-                    FontWeight="SemiBold" Cursor="Hand"
-                    ToolTip="Войти в систему">
+                            Background="#FF2D5AA1" 
+                            Foreground="White" 
+                            Padding="15,8"
+                            FontWeight="SemiBold" 
+                            FontSize="14"
+                            Cursor="Hand"
+                            BorderThickness="1"
+                            BorderBrush="White"
+                            ToolTip="Войти в систему">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Visibility" Value="Collapsed"/>
@@ -98,12 +131,6 @@
                             </Style>
                         </Button.Style>
                     </Button>
-               
-                    <Button Content="Выйти" Command="{Binding LogoutCommand}" 
-                    Background="#FFE74C3C" Foreground="White" Padding="15,8"
-                    Visibility="{Binding IsLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"
-                    FontWeight="SemiBold" Cursor="Hand"
-                    ToolTip="Выйти из системы"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -118,22 +145,26 @@
             <!-- Панель фильтров -->
             <Border Grid.Column="0" Background="White" BorderBrush="LightGray" BorderThickness="1" Padding="15">
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Поиск и фильтры" FontWeight="Bold" FontSize="18" Margin="0,0,0,15" Foreground="#FF2D5AA1"/>
+                    <TextBlock Text="Поиск и фильтры" FontWeight="Bold" FontSize="18" Margin="0,0,0,15" Foreground="#FF2D5AA1"
+                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
 
                     <!-- Поиск -->
-                    <TextBlock Text="Поиск по названию:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBlock Text="Поиск по названию:" FontWeight="SemiBold" Margin="0,0,0,5"
+                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                     <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
                              Padding="10" FontSize="14" Margin="0,0,0,15"
                              BorderBrush="#FFDDDDDD" BorderThickness="1" Background="White"
-                             ToolTip="Поиск по названию абонемента или заведения (максимум 250 символов)"
-                             MaxLength="250">
+                             ToolTip="Поиск по названию абонемента или заведения. Разрешены только буквы, цифры и пробелы"
+                             MaxLength="150"
+                             PreviewTextInput="SearchTextValidationTextBox">
                         <TextBox.InputBindings>
                             <KeyBinding Key="Enter" Command="{Binding SearchCommand}"/>
                         </TextBox.InputBindings>
                     </TextBox>
 
                     <!-- Тип абонемента -->
-                    <TextBlock Text="Тип абонемента:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBlock Text="Тип абонемента:" FontWeight="SemiBold" Margin="0,0,0,5"
+                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                     <ComboBox ItemsSource="{Binding SubscriptionTypes}" 
                               SelectedValuePath="Id"
                               SelectedValue="{Binding SelectedTypeId}"
@@ -143,33 +174,40 @@
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical" Margin="2">
-                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="13"/>
+                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="13"
+                                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="280"/>
                                     <TextBlock Text="{Binding Description}" FontSize="11" Foreground="#666666" TextWrapping="Wrap" 
-                                               MaxWidth="300" TextTrimming="CharacterEllipsis"/>
+                                               MaxWidth="280" TextTrimming="CharacterEllipsis"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
                     <!-- Диапазон цен -->
-                    <TextBlock Text="Диапазон цен (руб.):" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBlock Text="Диапазон цен (руб.):" FontWeight="SemiBold" Margin="0,0,0,5"
+                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="От:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="SemiBold"/>
+                        <TextBlock Text="От:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="SemiBold"
+                                  TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
                         <TextBox Text="{Binding MinPrice, UpdateSourceTrigger=PropertyChanged}" 
-                                 Padding="5" Width="80" FontSize="12"
+                                 Padding="10" Width="80" FontSize="12"
                                  BorderBrush="#FFDDDDDD" BorderThickness="1" Background="White"
                                  ToolTip="Минимальная цена (только цифры)"
-                                 PreviewTextInput="NumberValidationTextBox"/>
-                        <TextBlock Text="До:" VerticalAlignment="Center" Margin="10,0,5,0" FontWeight="SemiBold"/>
+                                 PreviewTextInput="NumberValidationTextBox"
+                                 MaxLength="10"/>
+                        <TextBlock Text="До:" VerticalAlignment="Center" Margin="10,0,5,0" FontWeight="SemiBold"
+                                  TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
                         <TextBox Text="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}" 
-                                 Padding="5" Width="80" FontSize="12"
+                                 Padding="10" Width="80" FontSize="12"
                                  BorderBrush="#FFDDDDDD" BorderThickness="1" Background="White"
                                  ToolTip="Максимальная цена (только цифры)"
-                                 PreviewTextInput="NumberValidationTextBox"/>
+                                 PreviewTextInput="NumberValidationTextBox"
+                                 MaxLength="10"/>
                     </StackPanel>
 
                     <!-- Фильтр по рейтингу -->
-                    <TextBlock Text="Минимальный рейтинг:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBlock Text="Минимальный рейтинг:" FontWeight="SemiBold" Margin="0,0,0,5"
+                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                     <ComboBox ItemsSource="{Binding RatingOptions}" 
                               SelectedValue="{Binding MinRating}"
                               SelectedValuePath="Value"
@@ -179,7 +217,8 @@
                               ToolTip="Выберите минимальный рейтинг"/>
 
                     <!-- Сортировка -->
-                    <TextBlock Text="Сортировка:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBlock Text="Сортировка:" FontWeight="SemiBold" Margin="0,0,0,5"
+                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                     <ComboBox ItemsSource="{Binding SortOptions}" 
                               SelectedValue="{Binding SelectedSortOption}"
                               SelectedValuePath="Value"
@@ -222,7 +261,8 @@
                                             <!-- Заголовок, тип и рейтинг -->
                                             <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
                                                 <TextBlock Text="{Binding Name}" 
-                                                           FontWeight="Bold" FontSize="18" Foreground="#FF2D5AA1"/>
+                                                           FontWeight="Bold" FontSize="18" Foreground="#FF2D5AA1"
+                                                           TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="400"/>
 
                                                 <!-- Блок типа с цветами через DataTrigger -->
                                                 <Border Padding="8,4" Margin="10,0,0,0">
@@ -249,43 +289,55 @@
                                                         </Style>
                                                     </Border.Style>
                                                     <TextBlock Text="{Binding TypeName}" 
-                                                               FontSize="11" FontWeight="Bold" Foreground="White"/>
+                                                               FontSize="11" FontWeight="Bold" Foreground="White"
+                                                               TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="120"/>
                                                 </Border>
                                             </StackPanel>
 
                                             <!-- Рейтинг -->
                                             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                                                <TextBlock Text="⭐" FontSize="14" Margin="0,0,5,0"/>
+                                                <TextBlock Text="⭐" FontSize="14" Margin="0,0,5,0"
+                                                          TextWrapping="NoWrap"/>
                                                 <TextBlock Text="{Binding Rating, StringFormat='{}{0:F1}'}" 
-                                                           FontWeight="Bold" FontSize="14" Foreground="#FFA500"/>
+                                                           FontWeight="Bold" FontSize="14" Foreground="#FFA500"
+                                                           TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
                                                 <TextBlock Text="/5.0" FontSize="12" Foreground="#888888" 
-                                                          VerticalAlignment="Bottom" Margin="2,0,0,1"/>
+                                                          VerticalAlignment="Bottom" Margin="2,0,0,1"
+                                                          TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
                                             </StackPanel>
 
                                             <!-- Заведение -->
                                             <TextBlock Text="{Binding FacilityName}" 
-                                                       FontSize="16" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FF555555"/>
+                                                       FontSize="16" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FF555555"
+                                                       TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="500"/>
 
                                             <!-- Описание -->
                                             <TextBlock Text="{Binding Description}" 
-                                                       TextWrapping="Wrap" Margin="0,0,0,10" FontSize="14" Foreground="#FF666666"/>
+                                                       TextWrapping="Wrap" Margin="0,0,0,10" FontSize="14" Foreground="#FF666666"
+                                                       TextTrimming="CharacterEllipsis" MaxHeight="60"/>
 
                                             <!-- Особенности -->
                                             <StackPanel Orientation="Vertical" Margin="0,0,0,5">
-                                                <TextBlock Text="Включенные услуги:" FontWeight="SemiBold" FontSize="13" Margin="0,0,0,3"/>
+                                                <TextBlock Text="Включенные услуги:" FontWeight="SemiBold" FontSize="13" Margin="0,0,0,3"
+                                                          TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                                                 <TextBlock Text="{Binding Features}" 
-                                                           FontSize="13" Foreground="#FF2D5AA1" TextWrapping="Wrap"/>
+                                                           FontSize="13" Foreground="#FF2D5AA1" TextWrapping="Wrap"
+                                                           TextTrimming="CharacterEllipsis" MaxHeight="40"/>
                                             </StackPanel>
 
                                             <!-- Контакты -->
                                             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="📍" FontSize="12" Margin="0,0,5,0"/>
-                                                    <TextBlock Text="{Binding Address}" FontSize="12" Foreground="#FF888888"/>
+                                                    <TextBlock Text="📍" FontSize="12" Margin="0,0,5,0"
+                                                              TextWrapping="NoWrap"/>
+                                                    <TextBlock Text="{Binding Address}" FontSize="12" Foreground="#FF888888"
+                                                              TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="400"/>
                                                 </StackPanel>
                                                 <StackPanel Orientation="Horizontal" Margin="0,3,0,0">
-                                                    <TextBlock Text="📞" FontSize="12" Margin="0,0,5,0"/>
-                                                    <TextBlock Text="{Binding Phone}" FontSize="12" Foreground="#FF888888"/>
+                                                    <TextBlock Text="📞" FontSize="12" Margin="0,0,5,0"
+                                                              TextWrapping="NoWrap"/>
+                                                    <TextBlock Text="{Binding Phone}" FontSize="12" Foreground="#FF888888"
+                                                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="200"/>
                                                 </StackPanel>
                                             </StackPanel>
                                         </StackPanel>
@@ -295,38 +347,54 @@
                                             <!-- Цена -->
                                             <Border Background="#FFF0F8FF" Padding="15,10" BorderBrush="#FF2D5AA1" BorderThickness="1">
                                                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                                                    <TextBlock Text="Цена" FontSize="12" Foreground="#666666" HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="Цена" FontSize="12" Foreground="#666666" HorizontalAlignment="Center"
+                                                              TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
                                                     <TextBlock Text="{Binding Price, StringFormat='{}{0} руб.'}" 
-                                                               FontWeight="Bold" FontSize="20" Foreground="#FF2D5AA1" HorizontalAlignment="Center"/>
+                                                               FontWeight="Bold" FontSize="20" Foreground="#FF2D5AA1" HorizontalAlignment="Center"
+                                                               TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="120"/>
                                                 </StackPanel>
                                             </Border>
 
                                             <!-- Детали -->
                                             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                                                    <TextBlock Text="🕐" FontSize="11" Margin="0,0,5,0"/>
+                                                    <TextBlock Text="🕐" FontSize="11" Margin="0,0,5,0"
+                                                              TextWrapping="NoWrap"/>
                                                     <TextBlock Text="{Binding DurationDays, StringFormat='{}Длительность: {0} дней'}" 
-                                                               FontSize="12" Foreground="#FF666666"/>
+                                                               FontSize="12" Foreground="#FF666666"
+                                                               TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="120"/>
                                                 </StackPanel>
 
                                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                                                    <TextBlock Text="👥" FontSize="11" Margin="0,0,5,0"/>
+                                                    <TextBlock Text="👥" FontSize="11" Margin="0,0,5,0"
+                                                              TextWrapping="NoWrap"/>
                                                     <TextBlock Text="{Binding VisitsCount, StringFormat='{}Посещений: {0}'}" 
-                                                               FontSize="12" Foreground="#FF666666"/>
+                                                               FontSize="12" Foreground="#FF666666"
+                                                               TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxWidth="120"/>
                                                 </StackPanel>
                                             </StackPanel>
 
                                             <!-- Кнопка добавления/удаления из сравнения -->
                                             <Button Command="{Binding DataContext.AddToComparisonCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                                                     CommandParameter="{Binding}"
-                                                    Background="#FF2D5AA1" Foreground="White" 
                                                     Padding="10,8" FontSize="12" FontWeight="SemiBold" 
                                                     BorderThickness="0"
-                                                    Cursor="Hand" Margin="0,15,0,0"
-                                                    ToolTip="Добавить абонемент к сравнению">
-                                                <Button.Content>
-                                                    <TextBlock Text="Добавить к сравнению"/>
-                                                </Button.Content>
+                                                    Cursor="Hand" Margin="0,15,0,0">
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="#FF2D5AA1"/>
+                                                        <Setter Property="Foreground" Value="White"/>
+                                                        <Setter Property="Content" Value="Добавить к сравнению"/>
+                                                        <Setter Property="ToolTip" Value="Добавить абонемент к сравнению"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsInComparison}" Value="True">
+                                                                <Setter Property="Background" Value="#FFE74C3C"/>
+                                                                <Setter Property="Content" Value="Удалить из сравнения"/>
+                                                                <Setter Property="ToolTip" Value="Удалить абонемент из сравнения"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
                                             </Button>
                                         </StackPanel>
                                     </Grid>
@@ -351,21 +419,29 @@
                             </Style>
                         </StackPanel.Style>
 
-                        <TextBlock Text="😕" FontSize="48" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+                        <TextBlock Text="😕" FontSize="48" HorizontalAlignment="Center" Margin="0,0,0,15"
+                                  TextWrapping="NoWrap"/>
                         <TextBlock Text="К сожалению, по вашему запросу ничего не найдено" 
                                   FontSize="18" Foreground="#FF666666" HorizontalAlignment="Center" 
-                                  TextAlignment="Center" FontWeight="SemiBold" Margin="0,0,0,10"/>
+                                  TextAlignment="Center" FontWeight="SemiBold" Margin="0,0,0,10"
+                                  TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="500"/>
 
                         <TextBlock Text="Попробуйте изменить параметры поиска:" 
                                   FontSize="14" Foreground="#888888" HorizontalAlignment="Center" 
-                                  TextAlignment="Center" Margin="0,0,0,20"/>
+                                  TextAlignment="Center" Margin="0,0,0,20"
+                                  TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="400"/>
 
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                            <TextBlock Text="• Упростите поисковый запрос" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"/>
-                            <TextBlock Text="• Выберите другой тип абонемента" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"/>
-                            <TextBlock Text="• Расширьте диапазон цен" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"/>
-                            <TextBlock Text="• Понизьте минимальный рейтинг" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"/>
-                            <TextBlock Text="• Сбросьте фильтры и посмотрите все предложения" FontSize="13" Foreground="#FF666666"/>
+                            <TextBlock Text="• Упростите поисковый запрос" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"
+                                      TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="300"/>
+                            <TextBlock Text="• Выберите другой тип абонемента" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"
+                                      TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="300"/>
+                            <TextBlock Text="• Расширьте диапазон цен" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"
+                                      TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="300"/>
+                            <TextBlock Text="• Понизьте минимальный рейтинг" FontSize="13" Foreground="#FF666666" Margin="0,0,0,5"
+                                      TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="300"/>
+                            <TextBlock Text="• Сбросьте фильтры и посмотрите все предложения" FontSize="13" Foreground="#FF666666"
+                                      TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MaxWidth="300"/>
                         </StackPanel>
 
                         <Button Content="Показать все абонементы" 
